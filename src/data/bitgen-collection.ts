@@ -20,6 +20,7 @@ export const bitgenCollectionShape = defineShape({
         collectionImageInscriptionId: '',
         collectionJsonInscriptionId: '',
         rendererJavascriptInscriptionId: '',
+        collectionJavascriptInscriptionId: '',
         bitcoinAddress: '',
     },
     selectedRenderer: enumShape(RendererVersion),

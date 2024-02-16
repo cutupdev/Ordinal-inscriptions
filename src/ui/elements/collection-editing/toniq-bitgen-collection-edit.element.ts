@@ -269,6 +269,7 @@ const collectionInfoPropertyLabels: Readonly<Record<keyof BitgenCollection['coll
 const collectionIdPropertyLabels: Readonly<Record<keyof BitgenCollection['ids'], string>> = {
     bitcoinAddress: 'Bitcoin Receiving Address',
     collectionImageInscriptionId: 'Image Inscription Id',
+    collectionJavascriptInscriptionId: 'Collection JS Inscription Id',
     collectionJsonInscriptionId: 'Collection JSON Inscription Id',
     rendererJavascriptInscriptionId: 'Renderer JS Inscription Id',
 };

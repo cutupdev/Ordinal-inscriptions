@@ -77,7 +77,11 @@ export function generateTraitsString(
 
 export function createInscriptionHtmlCode(bitgenCollection: Readonly<BitgenCollection>): string {
     const traitString = generateTraitsString(bitgenCollection, false);
-    return `<script t="${traitString}" src="/content/COLLECTION-JS-INSCRIPTION-ID-HERE"></script>`;
+    const collectionJsInscriptionId =
+        bitgenCollection.ids.collectionJavascriptInscriptionId ||
+        'COLLECTION-JS-INSCRIPTION-ID-HERE';
+
+    return `<script t="${traitString}" src="/content/${collectionJsInscriptionId}"></script>`;
 }
 
 export function createCollectionJavascriptCode(
@@ -88,8 +92,7 @@ export function createCollectionJavascriptCode(
     const rendererJavascriptInscriptionId =
         bitgenCollection.ids.rendererJavascriptInscriptionId || 'RENDERER-JS-INSCRIPTION-ID-HERE';
 
-    return `/* edit these values */
-const myValues = {
+    return `const myValues = {
     collectionJsonInscriptionId: '${collectionJsonInscriptionId}',
     rendererJsInscriptionId: '${rendererJavascriptInscriptionId}',
     renderSize: {width: ${bitgenCollection.size.width}, height: ${bitgenCollection.size.height}},

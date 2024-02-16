@@ -4,6 +4,10 @@ import {latestRendererVersion} from './bitgen-renderer-code';
 
 export function generateDefaultBitgenCollections(): ReadonlyArray<Readonly<BitgenCollection>> {
     const defaultBitgenCollections: ReadonlyArray<Readonly<BitgenCollection>> = [
+        /**
+         * Example taken from inscription
+         * 2488a03973e1d780bbc22f938e3c1f49a987a83aee9f89fa747245b60e53eed2i0.
+         */
         {
             editId: randomString(16),
             ids: {
@@ -13,6 +17,8 @@ export function generateDefaultBitgenCollections(): ReadonlyArray<Readonly<Bitge
                     '0e10e346ae3f39b5184b833489feb7d1ffc305f676eeb132c2510d033d636350i0',
                 collectionImageInscriptionId:
                     '143ee69b6e790e06c666c7d0104d46ee014197395662e70c55039a7b150075a1i0',
+                collectionJavascriptInscriptionId:
+                    'dd3716ea72d4ea97f7c7439a9acf81441fd4714936afdc9cb7d81a1e6675ce2ai0',
                 bitcoinAddress: '',
             },
             selectedRenderer: latestRendererVersion,

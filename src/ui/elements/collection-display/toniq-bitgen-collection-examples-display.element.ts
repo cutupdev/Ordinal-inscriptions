@@ -1,4 +1,4 @@
-import {Dimensions, randomInteger} from '@augment-vir/common';
+import {Dimensions, mapObjectValues, randomInteger} from '@augment-vir/common';
 import {ToniqHeading, ToniqHeadingLevel, defineToniqElement} from '@toniq-labs/design-system';
 import {css, html} from 'element-vir';
 import {noNativeSpacing} from 'vira';
@@ -132,6 +132,10 @@ function generateFrameExamples(bitgenCollection: Readonly<BitgenCollection>) {
         {
             title: 'Exact Size',
             size: bitgenCollection.size,
+        },
+        {
+            title: 'Half Size',
+            size: mapObjectValues(bitgenCollection.size, (key, value) => Math.floor(value / 2)),
         },
         {
             title: '1:1',

@@ -1,3 +1,3 @@
 # Description
 
-Bitcoin Generative Ordinal Inscriptions
+Bitcoin Ordinal Inscriptions
